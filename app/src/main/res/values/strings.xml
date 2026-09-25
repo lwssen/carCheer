@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">加油记账</string>
+
+    <!-- 主页 -->
+    <string name="vehicles_title">我的车辆</string>
+    <string name="empty_vehicles">还没有车辆\n点击右下角 + 添加第一辆车</string>
+    <string name="fab_add_vehicle">添加车辆</string>
+
+    <!-- 车辆列表项 -->
+    <string name="vehicle_records_fmt">%d 条加油记录</string>
+
+    <!-- 车辆编辑对话框 -->
+    <string name="vehicle_add_title">添加车辆</string>
+    <string name="vehicle_edit_title">编辑车辆</string>
+    <string name="vehicle_name_label">车辆名称 *</string>
+    <string name="vehicle_name_hint">如：我的小白</string>
+    <string name="vehicle_plate_label">车牌号</string>
+    <string name="vehicle_plate_hint">如：粤A12345</string>
+    <string name="vehicle_initial_odometer_label">初始里程（km）</string>
+    <string name="vehicle_initial_odometer_hint">当前里程表读数</string>
+    <string name="vehicle_tank_label">油箱容积（L）</string>
+    <string name="vehicle_tank_hint">选填</string>
+    <string name="error_vehicle_name_required">请填写车辆名称</string>
+    <string name="error_invalid_number">数字格式不正确</string>
+    <string name="vehicle_default_label">设为默认车辆</string>
+    <string name="vehicle_current_odometer_label">当前里程（km）</string>
+    <string name="vehicle_last_odometer_label">上次里程（km）</string>
+    <string name="vehicle_default_badge">默认</string>
+
+    <!-- 通用 -->
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_delete">删除</string>
+    <string name="action_ok">知道了</string>
+    <string name="confirm_delete_vehicle_title">删除车辆</string>
+    <string name="confirm_delete_vehicle_msg">删除“%1$s”将同时删除其全部加油记录，且无法恢复。确定删除吗？</string>
+
+    <!-- 底部导航 -->
+    <string name="nav_records">首页</string>
+    <string name="nav_stats">统计</string>
+    <string name="nav_mine">设置</string>
+
+    <!-- 车辆管理页 -->
+    <string name="vehicle_manage_title">车辆管理</string>
+
+    <!-- 记录列表 -->
+    <string name="fab_add_record">添加加油记录</string>
+    <string name="empty_records">还没有加油记录\n点击右下角 + 记一笔</string>
+    <string name="empty_records_no_vehicle">请先到“设置 → 车辆管理”中添加车辆</string>
+    <string name="record_full_tank">加满</string>
+    <string name="filter_full_all">全部</string>
+    <string name="filter_full_no">未加满</string>
+    <string name="filter_empty_result">当前筛选条件下暂无加油记录</string>
+    <string name="consumption_fmt">油耗 %.2f L/100km</string>
+    <string name="count_fmt">%d 次</string>
+
+    <!-- 历史查询 -->
+    <string name="nav_history">历史</string>
+    <string name="history_start_date">开始日期</string>
+    <string name="history_end_date">结束日期</string>
+    <string name="time_type_month">本月</string>
+    <string name="time_type_3months">近三月</string>
+    <string name="time_type_half_year">近半年</string>
+    <string name="time_type_1year">近一年</string>
+    <string name="time_type_custom">自定义</string>
+    <string name="data_type_all">全部</string>
+    <string name="data_type_max_price">最高油价</string>
+    <string name="data_type_max_amount">最高加油金额</string>
+    <string name="history_empty_range">该时间段内暂无加油记录</string>
+    <string name="history_empty_valid_data">该时间段内没有有效的油价/金额数据</string>
+    <string name="history_max_badge">最高</string>
+    <string name="history_mode_list">列表</string>
+    <string name="history_mode_stats">统计</string>
+    <string name="history_max_price_date">最高油价日期</string>
+    <string name="history_max_amount_date">最高加油金额日期</string>
+
+    <!-- 油耗未结算原因 -->
+    <string name="issue_first_tank">首箱未结算</string>
+    <string name="issue_volume_missing">区间油量缺失，无法结算</string>
+    <string name="issue_odometer_backward">里程表读数倒退，无法结算</string>
+    <string name="issue_zero_distance">里程无变化，无法结算</string>
+    <string name="issue_unknown">暂无油耗</string>
+
+    <!-- 记录编辑页 -->
+    <string name="record_add_title">添加加油记录</string>
+    <string name="record_edit_title">编辑加油记录</string>
+    <string name="record_fuel_type_label">油品类型</string>
+    <string name="record_amount_label">金额（元）</string>
+    <string name="record_volume_label">油量（升）</string>
+    <string name="record_price_label">单价（元/升）</string>
+    <string name="record_odometer_label">里程表（km）</string>
+    <string name="record_station_label">加油站</string>
+    <string name="record_full_tank_label">本次加满</string>
+    <string name="record_note_label">备注</string>
+    <string name="error_amount_or_volume">金额和油量至少填写一项</string>
+    <string name="error_odometer_required">请填写里程表读数</string>
+    <string name="error_no_vehicle">缺少车辆信息</string>
+    <string name="confirm_delete_record_title">删除记录</string>
+    <string name="confirm_delete_record_msg">确定删除这条加油记录吗？删除后无法恢复。</string>
+
+    <string-array name="fuel_types">
+        <item>92#</item>
+        <item>95#</item>
+        <item>98#</item>
+        <item>0# 柴油</item>
+        <item>电</item>
+    </string-array>
+
+    <!-- 统计 / 我的 -->
+    <string name="stats_total_count">累计加油</string>
+    <string name="stats_total_amount">累计花费</string>
+    <string name="stats_total_volume">累计油量</string>
+    <string name="stats_avg_consumption">平均油耗（L/100km）</string>
+    <string name="stats_price_change">最新油价 %1$.2f 元/L，较上次 %2$s</string>
+    <string name="stats_price_latest_only">最新油价 %1$.2f 元/L</string>
+    <string name="stats_trend_title">油耗趋势</string>
+    <string name="stats_trend_empty">还没有可展示的油耗数据\n多记几次“加满”就能看到趋势啦</string>
+    <string name="stats_monthly_title">月度汇总</string>
+    <string name="stats_no_data">--</string>
+    <string name="about_title">关于</string>
+    <string name="about_message">加油记账 carCheer v%1$s\n纯离线加油记账助手\n数据仅保存在本机</string>
+
+    <!-- 数据管理 -->
+    <string name="data_manage_title">数据管理</string>
+    <string name="data_export">导出记录（CSV）</string>
+    <string name="data_import">导入记录（CSV）</string>
+    <string name="data_clear">清空全部数据</string>
+    <string name="confirm_clear_all_msg">将删除所有车辆和全部加油记录，且无法恢复。确定清空吗？\n（建议先导出 CSV 备份）</string>
+    <string name="export_done">导出成功</string>
+    <string name="export_failed">导出失败，请重试</string>
+    <string name="import_done">导入完成：新增 %1$d 条记录，新建 %2$d 辆车</string>
+    <string name="import_failed">导入失败，请检查文件格式</string>
+    <string name="clear_done">已清空全部数据</string>
+
+    <!-- 设置：主题与语言 -->
+    <string name="settings_theme_row">主题变更</string>
+    <string name="settings_language_row">语言切换</string>
+    <string name="settings_theme_title">选择主题颜色</string>
+    <string name="settings_language_title">选择语言 / Language</string>
+    <string name="settings_lang_zh">中文</string>
+    <string name="settings_lang_en">English</string>
+
+    <string-array name="theme_names">
+        <item>红色（默认）</item>
+        <item>蓝色</item>
+        <item>绿色</item>
+        <item>紫色</item>
+        <item>橙色</item>
+        <item>青色</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_primary">#B3261E</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#FFDAD6</color>
+    <color name="md_theme_onPrimaryContainer">#410002</color>
+    <color name="md_theme_secondary">#775652</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#FFDAD5</color>
+    <color name="md_theme_onSecondaryContainer">#2C1512</color>
+    <color name="md_theme_surface">#FFF8F7</color>
+    <color name="md_theme_onSurface">#201A19</color>
+    <color name="md_theme_surfaceVariant">#F5DDDA</color>
+    <color name="md_theme_onSurfaceVariant">#534341</color>
+
+    <!-- 主题变体：蓝 -->
+    <color name="theme_blue_primary">#1565C0</color>
+    <color name="theme_blue_onPrimary">#FFFFFF</color>
+    <color name="theme_blue_primaryContainer">#D6E3FF</color>
+    <color name="theme_blue_onPrimaryContainer">#001B3F</color>
+    <color name="theme_blue_secondary">#565E71</color>
+    <color name="theme_blue_onSecondary">#FFFFFF</color>
+    <color name="theme_blue_secondaryContainer">#DAE2F9</color>
+    <color name="theme_blue_onSecondaryContainer">#131C2B</color>
+
+    <!-- 主题变体：绿 -->
+    <color name="theme_green_primary">#2E7D32</color>
+    <color name="theme_green_onPrimary">#FFFFFF</color>
+    <color name="theme_green_primaryContainer">#B7F0B9</color>
+    <color name="theme_green_onPrimaryContainer">#002105</color>
+    <color name="theme_green_secondary">#52634F</color>
+    <color name="theme_green_onSecondary">#FFFFFF</color>
+    <color name="theme_green_secondaryContainer">#D5E8CF</color>
+    <color name="theme_green_onSecondaryContainer">#101F10</color>
+
+    <!-- 主题变体：紫 -->
+    <color name="theme_purple_primary">#6A1B9A</color>
+    <color name="theme_purple_onPrimary">#FFFFFF</color>
+    <color name="theme_purple_primaryContainer">#F2DAFF</color>
+    <color name="theme_purple_onPrimaryContainer">#27143A</color>
+    <color name="theme_purple_secondary">#655A6F</color>
+    <color name="theme_purple_onSecondary">#FFFFFF</color>
+    <color name="theme_purple_secondaryContainer">#ECDDF6</color>
+    <color name="theme_purple_onSecondaryContainer">#20182A</color>
+
+    <!-- 主题变体：橙 -->
+    <color name="theme_orange_primary">#E65100</color>
+    <color name="theme_orange_onPrimary">#FFFFFF</color>
+    <color name="theme_orange_primaryContainer">#FFDBCC</color>
+    <color name="theme_orange_onPrimaryContainer">#3A1300</color>
+    <color name="theme_orange_secondary">#74593F</color>
+    <color name="theme_orange_onSecondary">#FFFFFF</color>
+    <color name="theme_orange_secondaryContainer">#FFDCC1</color>
+    <color name="theme_orange_onSecondaryContainer">#2B1707</color>
+
+    <!-- 主题变体：青 -->
+    <color name="theme_teal_primary">#00838F</color>
+    <color name="theme_teal_onPrimary">#FFFFFF</color>
+    <color name="theme_teal_primaryContainer">#B4EBFF</color>
+    <color name="theme_teal_onPrimaryContainer">#001F26</color>
+    <color name="theme_teal_secondary">#4A636A</color>
+    <color name="theme_teal_onSecondary">#FFFFFF</color>
+    <color name="theme_teal_secondaryContainer">#CCE8EF</color>
+    <color name="theme_teal_onSecondaryContainer">#051F25</color>
+</resources>

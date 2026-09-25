@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CarCheer" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer</item>
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant</item>
+    </style>
+
+    <style name="Theme.CarCheer.Blue" parent="Theme.CarCheer">
+        <item name="colorPrimary">@color/theme_blue_primary</item>
+        <item name="colorOnPrimary">@color/theme_blue_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme_blue_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme_blue_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme_blue_secondary</item>
+        <item name="colorOnSecondary">@color/theme_blue_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme_blue_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme_blue_onSecondaryContainer</item>
+    </style>
+
+    <style name="Theme.CarCheer.Green" parent="Theme.CarCheer">
+        <item name="colorPrimary">@color/theme_green_primary</item>
+        <item name="colorOnPrimary">@color/theme_green_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme_green_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme_green_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme_green_secondary</item>
+        <item name="colorOnSecondary">@color/theme_green_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme_green_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme_green_onSecondaryContainer</item>
+    </style>
+
+    <style name="Theme.CarCheer.Purple" parent="Theme.CarCheer">
+        <item name="colorPrimary">@color/theme_purple_primary</item>
+        <item name="colorOnPrimary">@color/theme_purple_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme_purple_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme_purple_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme_purple_secondary</item>
+        <item name="colorOnSecondary">@color/theme_purple_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme_purple_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme_purple_onSecondaryContainer</item>
+    </style>
+
+    <style name="Theme.CarCheer.Orange" parent="Theme.CarCheer">
+        <item name="colorPrimary">@color/theme_orange_primary</item>
+        <item name="colorOnPrimary">@color/theme_orange_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme_orange_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme_orange_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme_orange_secondary</item>
+        <item name="colorOnSecondary">@color/theme_orange_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme_orange_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme_orange_onSecondaryContainer</item>
+    </style>
+
+    <style name="Theme.CarCheer.Teal" parent="Theme.CarCheer">
+        <item name="colorPrimary">@color/theme_teal_primary</item>
+        <item name="colorOnPrimary">@color/theme_teal_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme_teal_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme_teal_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme_teal_secondary</item>
+        <item name="colorOnSecondary">@color/theme_teal_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme_teal_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme_teal_onSecondaryContainer</item>
+    </style>
+</resources>

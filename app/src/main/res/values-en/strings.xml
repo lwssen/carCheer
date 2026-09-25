@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">carCheer</string>
+
+    <!-- Home -->
+    <string name="vehicles_title">My Vehicles</string>
+    <string name="empty_vehicles">No vehicles yet\nTap + to add your first vehicle</string>
+    <string name="fab_add_vehicle">Add vehicle</string>
+
+    <!-- Vehicle list item -->
+    <string name="vehicle_records_fmt">%d refuel records</string>
+
+    <!-- Vehicle edit dialog -->
+    <string name="vehicle_add_title">Add Vehicle</string>
+    <string name="vehicle_edit_title">Edit Vehicle</string>
+    <string name="vehicle_name_label">Name *</string>
+    <string name="vehicle_name_hint">e.g. My小白</string>
+    <string name="vehicle_plate_label">Plate No.</string>
+    <string name="vehicle_plate_hint">e.g. ABC12345</string>
+    <string name="vehicle_initial_odometer_label">Initial odometer (km)</string>
+    <string name="vehicle_initial_odometer_hint">Current odometer reading</string>
+    <string name="vehicle_tank_label">Tank capacity (L)</string>
+    <string name="vehicle_tank_hint">Optional</string>
+    <string name="error_vehicle_name_required">Please enter a vehicle name</string>
+    <string name="error_invalid_number">Invalid number format</string>
+    <string name="vehicle_default_label">Set as default vehicle</string>
+    <string name="vehicle_current_odometer_label">Current odometer (km)</string>
+    <string name="vehicle_last_odometer_label">Last odometer (km)</string>
+    <string name="vehicle_default_badge">Default</string>
+
+    <!-- Common -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_ok">OK</string>
+    <string name="confirm_delete_vehicle_title">Delete Vehicle</string>
+    <string name="confirm_delete_vehicle_msg">Deleting “%1$s” will also delete all its refuel records. This cannot be undone. Delete?</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_records">Home</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_history">History</string>
+    <string name="nav_mine">Settings</string>
+
+    <!-- Vehicle management -->
+    <string name="vehicle_manage_title">Vehicle Management</string>
+
+    <!-- Record list -->
+    <string name="fab_add_record">Add refuel record</string>
+    <string name="empty_records">No refuel records yet\nTap + to log one</string>
+    <string name="empty_records_no_vehicle">Please add a vehicle in “Settings → Vehicle Management” first</string>
+    <string name="record_full_tank">Full</string>
+    <string name="filter_full_all">All</string>
+    <string name="filter_full_no">Not full</string>
+    <string name="filter_empty_result">No refuel records match the current filters</string>
+    <string name="consumption_fmt">Consumption %.2f L/100km</string>
+    <string name="count_fmt">%d times</string>
+
+    <!-- History -->
+    <string name="history_start_date">Start date</string>
+    <string name="history_end_date">End date</string>
+    <string name="time_type_month">This month</string>
+    <string name="time_type_3months">Last 3 months</string>
+    <string name="time_type_half_year">Last 6 months</string>
+    <string name="time_type_1year">Last year</string>
+    <string name="time_type_custom">Custom</string>
+    <string name="data_type_all">All</string>
+    <string name="data_type_max_price">Highest price</string>
+    <string name="data_type_max_amount">Highest amount</string>
+    <string name="history_empty_range">No refuel records in this period</string>
+    <string name="history_empty_valid_data">No valid price/amount data in this period</string>
+    <string name="history_max_badge">Top</string>
+    <string name="history_mode_list">List</string>
+    <string name="history_mode_stats">Stats</string>
+    <string name="history_max_price_date">Highest price date</string>
+    <string name="history_max_amount_date">Highest amount date</string>
+
+    <!-- Fuel consumption issues -->
+    <string name="issue_first_tank">First tank, not settled</string>
+    <string name="issue_volume_missing">Missing volume, cannot settle</string>
+    <string name="issue_odometer_backward">Odometer went backward, cannot settle</string>
+    <string name="issue_zero_distance">No distance change, cannot settle</string>
+    <string name="issue_unknown">No consumption</string>
+
+    <!-- Record edit -->
+    <string name="record_add_title">Add Refuel Record</string>
+    <string name="record_edit_title">Edit Refuel Record</string>
+    <string name="record_fuel_type_label">Fuel type</string>
+    <string name="record_amount_label">Amount (CNY)</string>
+    <string name="record_volume_label">Volume (L)</string>
+    <string name="record_price_label">Unit price (CNY/L)</string>
+    <string name="record_odometer_label">Odometer (km)</string>
+    <string name="record_station_label">Station</string>
+    <string name="record_full_tank_label">Filled up</string>
+    <string name="record_note_label">Note</string>
+    <string name="error_amount_or_volume">Fill in amount or volume (at least one)</string>
+    <string name="error_odometer_required">Please enter the odometer reading</string>
+    <string name="error_no_vehicle">Vehicle info missing</string>
+    <string name="confirm_delete_record_title">Delete Record</string>
+    <string name="confirm_delete_record_msg">Delete this refuel record? This cannot be undone.</string>
+
+    <string-array name="fuel_types">
+        <item>92#</item>
+        <item>95#</item>
+        <item>98#</item>
+        <item>0# Diesel</item>
+        <item>Electric</item>
+    </string-array>
+
+    <!-- Stats / Me -->
+    <string name="stats_total_count">Total refuels</string>
+    <string name="stats_total_amount">Total spent</string>
+    <string name="stats_total_volume">Total volume</string>
+    <string name="stats_avg_consumption">Avg consumption (L/100km)</string>
+    <string name="stats_price_change">Latest price %1$.2f CNY/L, %2$s vs last</string>
+    <string name="stats_price_latest_only">Latest price %1$.2f CNY/L</string>
+    <string name="stats_trend_title">Consumption Trend</string>
+    <string name="stats_trend_empty">No consumption data to show yet\nLog a few “full tank” fills to see the trend</string>
+    <string name="stats_monthly_title">Monthly Summary</string>
+    <string name="stats_no_data">--</string>
+    <string name="about_title">About</string>
+    <string name="about_message">carCheer v%1$s\nOffline refuel tracker\nAll data stays on this device</string>
+
+    <!-- Data management -->
+    <string name="data_manage_title">Data Management</string>
+    <string name="data_export">Export records (CSV)</string>
+    <string name="data_import">Import records (CSV)</string>
+    <string name="data_clear">Clear all data</string>
+    <string name="confirm_clear_all_msg">All vehicles and refuel records will be deleted. This cannot be undone. Clear now?\n(Export a CSV backup first)</string>
+    <string name="export_done">Export succeeded</string>
+    <string name="export_failed">Export failed, please retry</string>
+    <string name="import_done">Import finished: %1$d records added, %2$d vehicles created</string>
+    <string name="import_failed">Import failed, please check the file format</string>
+    <string name="clear_done">All data cleared</string>
+
+    <!-- Settings: theme & language -->
+    <string name="settings_theme_row">Theme</string>
+    <string name="settings_language_row">Language</string>
+    <string name="settings_theme_title">Choose theme color</string>
+    <string name="settings_language_title">选择语言 / Language</string>
+    <string name="settings_lang_zh">中文</string>
+    <string name="settings_lang_en">English</string>
+
+    <string-array name="theme_names">
+        <item>Red (default)</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Orange</item>
+        <item>Teal</item>
+    </string-array>
+</resources>
