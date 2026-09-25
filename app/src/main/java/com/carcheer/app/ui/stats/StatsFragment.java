@@ -165,6 +165,12 @@ public class StatsFragment extends Fragment {
         binding.tvTotalCount.setText(getString(R.string.count_fmt, ov.count));
         binding.tvTotalAmount.setText(
                 String.format(Locale.CHINA, "¥%.2f", ov.totalAmount));
+        binding.tvTotalAmount.setOnClickListener(v ->
+                new com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+                        .setTitle(R.string.stats_amount_upper_title)
+                        .setMessage(com.carcheer.app.util.RmbUpperConverter.convert(ov.totalAmount))
+                        .setPositiveButton(R.string.action_ok, null)
+                        .show());
         binding.tvTotalVolume.setText(
                 String.format(Locale.CHINA, "%.2f L", ov.totalVolume));
         binding.tvAvgConsumption.setText(ov.avgConsumption == null

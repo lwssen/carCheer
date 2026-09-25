@@ -36,13 +36,13 @@ public abstract class AppDatabase extends RoomDatabase {
                 public void migrate(@NonNull androidx.sqlite.db.SupportSQLiteDatabase db) {
                     db.execSQL("ALTER TABLE vehicles ADD COLUMN currentOdometer REAL NOT NULL DEFAULT 0");
                     db.execSQL("ALTER TABLE vehicles ADD COLUMN lastOdometer REAL NOT NULL DEFAULT 0");
-                    // 当前里程 = 该车最新一条记录的里程表；上次里程 = 次新一条的里程表
-                    db.execSQL("UPDATE vehicles SET currentOdometer = ("
+                    // 当前里程 = 该车最新一条记录的里程表；上次里程 = 次新一条的里程表；无记录的车保持 0
+                    db.execSQL("UPDATE vehicles SET currentOdometer = IFNULL(("
                             + "SELECT r.odometer FROM refuel_records r WHERE r.vehicleId = vehicles.id "
-                            + "ORDER BY r.date DESC, r.id DESC LIMIT 1)");
-                    db.execSQL("UPDATE vehicles SET lastOdometer = ("
+                            + "ORDER BY r.date DESC, r.id DESC LIMIT 1), 0)");
+                    db.execSQL("UPDATE vehicles SET lastOdometer = IFNULL(("
                             + "SELECT r.odometer FROM refuel_records r WHERE r.vehicleId = vehicles.id "
-                            + "ORDER BY r.date DESC, r.id DESC LIMIT 1 OFFSET 1)");
+                            + "ORDER BY r.date DESC, r.id DESC LIMIT 1 OFFSET 1), 0)");
                 }
             };
 

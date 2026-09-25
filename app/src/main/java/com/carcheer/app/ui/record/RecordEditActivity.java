@@ -114,10 +114,43 @@ public class RecordEditActivity extends AppCompatActivity {
             dialog.getDatePicker().setMaxDate(System.currentTimeMillis());
             dialog.show();
         });
+        binding.btnTime.setOnClickListener(v -> showTimePicker());
+    }
+
+    /** 时/分/秒三个滚轮的自定义时间选择对话框 */
+    private void showTimePicker() {
+        android.view.View content = getLayoutInflater()
+                .inflate(com.carcheer.app.R.layout.dialog_time_pick, null);
+        android.widget.NumberPicker hourPicker = content.findViewById(com.carcheer.app.R.id.picker_hour);
+        android.widget.NumberPicker minutePicker = content.findViewById(com.carcheer.app.R.id.picker_minute);
+        android.widget.NumberPicker secondPicker = content.findViewById(com.carcheer.app.R.id.picker_second);
+        hourPicker.setMinValue(0);
+        hourPicker.setMaxValue(23);
+        minutePicker.setMinValue(0);
+        minutePicker.setMaxValue(59);
+        secondPicker.setMinValue(0);
+        secondPicker.setMaxValue(59);
+        hourPicker.setValue(date.get(Calendar.HOUR_OF_DAY));
+        minutePicker.setValue(date.get(Calendar.MINUTE));
+        secondPicker.setValue(date.get(Calendar.SECOND));
+
+        new com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.time_pick_title)
+                .setView(content)
+                .setPositiveButton(R.string.action_ok, (d, which) -> {
+                    date.set(Calendar.HOUR_OF_DAY, hourPicker.getValue());
+                    date.set(Calendar.MINUTE, minutePicker.getValue());
+                    date.set(Calendar.SECOND, secondPicker.getValue());
+                    refreshDateText();
+                })
+                .setNegativeButton(R.string.action_cancel, null)
+                .show();
     }
 
     private void refreshDateText() {
         binding.btnDate.setText(DateUtils.format(date.getTimeInMillis()));
+        binding.btnTime.setText(String.format(java.util.Locale.CHINA, "%02d:%02d:%02d",
+                date.get(Calendar.HOUR_OF_DAY), date.get(Calendar.MINUTE), date.get(Calendar.SECOND)));
     }
 
     private static final int IDX_AMOUNT = 0;

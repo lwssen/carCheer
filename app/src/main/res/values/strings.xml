@@ -92,6 +92,10 @@
     <string name="record_odometer_label">里程表（km）</string>
     <string name="record_station_label">加油站</string>
     <string name="record_full_tank_label">本次加满</string>
+    <string name="time_pick_title">调整时间</string>
+    <string name="time_unit_hour">时</string>
+    <string name="time_unit_minute">分</string>
+    <string name="time_unit_second">秒</string>
     <string name="record_note_label">备注</string>
     <string name="error_amount_or_volume">金额和油量至少填写一项</string>
     <string name="error_odometer_required">请填写里程表读数</string>
@@ -112,6 +116,7 @@
     <string name="stats_total_amount">累计花费</string>
     <string name="stats_total_volume">累计油量</string>
     <string name="stats_avg_consumption">平均油耗（L/100km）</string>
+    <string name="stats_amount_upper_title">累计花费（中文大写）</string>
     <string name="stats_price_change">最新油价 %1$.2f 元/L，较上次 %2$s</string>
     <string name="stats_price_latest_only">最新油价 %1$.2f 元/L</string>
     <string name="stats_trend_title">油耗趋势</string>

@@ -92,6 +92,10 @@
     <string name="record_odometer_label">Odometer (km)</string>
     <string name="record_station_label">Station</string>
     <string name="record_full_tank_label">Filled up</string>
+    <string name="time_pick_title">Adjust time</string>
+    <string name="time_unit_hour">Hour</string>
+    <string name="time_unit_minute">Min</string>
+    <string name="time_unit_second">Sec</string>
     <string name="record_note_label">Note</string>
     <string name="error_amount_or_volume">Fill in amount or volume (at least one)</string>
     <string name="error_odometer_required">Please enter the odometer reading</string>
@@ -112,6 +116,7 @@
     <string name="stats_total_amount">Total spent</string>
     <string name="stats_total_volume">Total volume</string>
     <string name="stats_avg_consumption">Avg consumption (L/100km)</string>
+    <string name="stats_amount_upper_title">Total spent (in Chinese uppercase)</string>
     <string name="stats_price_change">Latest price %1$.2f CNY/L, %2$s vs last</string>
     <string name="stats_price_latest_only">Latest price %1$.2f CNY/L</string>
     <string name="stats_trend_title">Consumption Trend</string>
