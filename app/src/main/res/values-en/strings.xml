@@ -67,12 +67,15 @@
     <string name="data_type_all">All</string>
     <string name="data_type_max_price">Highest price</string>
     <string name="data_type_max_amount">Highest amount</string>
+    <string name="data_type_min_price">Lowest price</string>
     <string name="history_empty_range">No refuel records in this period</string>
     <string name="history_empty_valid_data">No valid price/amount data in this period</string>
     <string name="history_max_badge">Top</string>
+    <string name="history_min_badge">Low</string>
     <string name="history_mode_list">List</string>
     <string name="history_mode_stats">Stats</string>
     <string name="history_max_price_date">Highest price date</string>
+    <string name="history_min_price_date">Lowest price date</string>
     <string name="history_max_amount_date">Highest amount date</string>
 
     <!-- Fuel consumption issues -->

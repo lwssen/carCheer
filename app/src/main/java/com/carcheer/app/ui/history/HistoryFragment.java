@@ -89,8 +89,7 @@ public class HistoryFragment extends Fragment {
         viewModel.getEndLive().observe(getViewLifecycleOwner(), v -> renderDateTexts(null));
 
         viewModel.getPagedRecords().observe(getViewLifecycleOwner(), list -> {
-            boolean highlight = viewModel.getDataType() != HistoryViewModel.DATA_TYPE_ALL;
-            adapter.submitList(list, highlight);
+            adapter.submitList(list, highlightBadge());
             updateEmptyState();
         });
         viewModel.getEmptyHint().observe(getViewLifecycleOwner(), v -> updateEmptyState());
@@ -131,7 +130,8 @@ public class HistoryFragment extends Fragment {
         String[] labels = {
                 getString(R.string.data_type_all),
                 getString(R.string.data_type_max_price),
-                getString(R.string.data_type_max_amount)
+                getString(R.string.data_type_max_amount),
+                getString(R.string.data_type_min_price)
         };
         ArrayAdapter<String> adapterData = new ArrayAdapter<>(
                 requireContext(), android.R.layout.simple_spinner_item, labels);
@@ -240,15 +240,34 @@ public class HistoryFragment extends Fragment {
         binding.tvSummaryMaxPrice.setText(ex.maxPrice == null
                 ? getString(R.string.stats_no_data)
                 : String.format(Locale.CHINA, "¥%.2f/L", ex.maxPrice));
+        binding.tvSummaryMinPrice.setText(ex.minPrice == null
+                ? getString(R.string.stats_no_data)
+                : String.format(Locale.CHINA, "¥%.2f/L", ex.minPrice));
         binding.tvSummaryMaxAmount.setText(ex.maxAmount == null
                 ? getString(R.string.stats_no_data)
                 : String.format(Locale.CHINA, "¥%.2f", ex.maxAmount));
         binding.tvSummaryMaxPriceDate.setText(ex.maxPriceDate == null
                 ? getString(R.string.stats_no_data)
                 : dateFormat.format(new Date(ex.maxPriceDate)));
+        binding.tvSummaryMinPriceDate.setText(ex.minPriceDate == null
+                ? getString(R.string.stats_no_data)
+                : dateFormat.format(new Date(ex.minPriceDate)));
         binding.tvSummaryMaxAmountDate.setText(ex.maxAmountDate == null
                 ? getString(R.string.stats_no_data)
                 : dateFormat.format(new Date(ex.maxAmountDate)));
+    }
+
+    /** 数据类型对应的列表高亮徽标文案，"全部"时返回 null 表示不高亮 */
+    @Nullable
+    private String highlightBadge() {
+        int type = viewModel.getDataType();
+        if (type == HistoryViewModel.DATA_TYPE_MAX_PRICE || type == HistoryViewModel.DATA_TYPE_MAX_AMOUNT) {
+            return getString(R.string.history_max_badge);
+        }
+        if (type == HistoryViewModel.DATA_TYPE_MIN_PRICE) {
+            return getString(R.string.history_min_badge);
+        }
+        return null;
     }
 
     private static int attrColor(View v, int attr) {

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carcheer.app.R;
@@ -21,14 +22,15 @@ import java.util.Locale;
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.Holder> {
 
     private final List<RefuelRecord> items = new ArrayList<>();
-    private boolean highlightAll;
+    /** 非空时列表整体高亮，并将该文案显示为徽标（如"最高"/"最低"） */
+    private String highlightBadge;
 
-    public void submitList(List<RefuelRecord> records, boolean highlightAll) {
+    public void submitList(List<RefuelRecord> records, @Nullable String highlightBadge) {
         items.clear();
         if (records != null) {
             items.addAll(records);
         }
-        this.highlightAll = highlightAll;
+        this.highlightBadge = highlightBadge;
         notifyDataSetChanged();
     }
 
@@ -49,6 +51,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.Holder> 
         RefuelRecord r = items.get(position);
         int primary = attrColor(holder.itemView, androidx.appcompat.R.attr.colorPrimary);
         int outline = attrColor(holder.itemView, com.google.android.material.R.attr.colorOutline);
+        boolean highlightAll = highlightBadge != null;
         holder.card.setStrokeWidth(dp(holder.itemView, highlightAll ? 2 : 1));
         holder.card.setStrokeColor(highlightAll ? primary : outline);
 
@@ -73,7 +76,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.Holder> 
 
         if (highlightAll) {
             holder.tvConsumption.setVisibility(View.VISIBLE);
-            holder.tvConsumption.setText(R.string.history_max_badge);
+            holder.tvConsumption.setText(highlightBadge);
             holder.tvConsumption.setTextColor(primary);
         } else if (r.consumption != null) {
             holder.tvConsumption.setVisibility(View.VISIBLE);

@@ -7,9 +7,11 @@ import com.carcheer.app.data.entity.RefuelRecord;
 import com.carcheer.app.util.FuelCalculator.Result;
 import com.carcheer.app.util.StatsCalculator.MonthStat;
 import com.carcheer.app.util.StatsCalculator.Overview;
+import com.carcheer.app.util.StatsCalculator.RangeExtremes;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -62,6 +64,37 @@ public class StatsCalculatorTest {
         assertNull(ov.avgConsumption);
         assertEquals(7.5, ov.latestPrice, 0.0001);
         assertNull(ov.previousPrice);
+    }
+
+    /** 极值：最高/最低油价与最高金额及日期，并列时取最近一次；缺油价记录不参与油价极值 */
+    @Test
+    public void extremes_maxMinPriceAndMaxAmount() {
+        List<RefuelRecord> records = Arrays.asList(
+                record(1, 1000L, 10000, 300.0, 40.0, 7.8, true),
+                record(2, 2000L, 10500, 200.0, 40.0, 7.5, true),
+                record(3, 3000L, 11000, 250.0, 40.0, 7.8, true),   // 油价并列最高，取最近
+                record(4, 4000L, 11500, null, null, null, true));  // 缺油价/金额
+        RangeExtremes ex = StatsCalculator.extremes(records);
+
+        assertEquals(7.8, ex.maxPrice, 0.0001);
+        assertEquals(3000L, ex.maxPriceDate.longValue());
+        assertEquals(7.5, ex.minPrice, 0.0001);
+        assertEquals(2000L, ex.minPriceDate.longValue());
+        assertEquals(300.0, ex.maxAmount, 0.0001);
+        assertEquals(1000L, ex.maxAmountDate.longValue());
+    }
+
+    /** 无记录时极值字段均为 null */
+    @Test
+    public void extremes_emptyRecords() {
+        RangeExtremes ex = StatsCalculator.extremes(new ArrayList<>());
+
+        assertNull(ex.maxPrice);
+        assertNull(ex.maxPriceDate);
+        assertNull(ex.minPrice);
+        assertNull(ex.minPriceDate);
+        assertNull(ex.maxAmount);
+        assertNull(ex.maxAmountDate);
     }
 
     /** 月度汇总：跨月分组、金额/油量汇总、月内里程极差 */

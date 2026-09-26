@@ -82,10 +82,12 @@ public final class StatsCalculator {
         return ov;
     }
 
-    /** 时间段内的最高油价/最高加油金额及其发生日期（并列时取最近一次） */
+    /** 时间段内的最高/最低油价与最高加油金额及其发生日期（并列时取最近一次） */
     public static class RangeExtremes {
         public Double maxPrice;
         public Long maxPriceDate;
+        public Double minPrice;
+        public Long minPriceDate;
         public Double maxAmount;
         public Long maxAmountDate;
     }
@@ -99,6 +101,10 @@ public final class StatsCalculator {
             if (r.price != null && (ex.maxPrice == null || r.price >= ex.maxPrice)) {
                 ex.maxPrice = r.price;
                 ex.maxPriceDate = r.date;
+            }
+            if (r.price != null && (ex.minPrice == null || r.price <= ex.minPrice)) {
+                ex.minPrice = r.price;
+                ex.minPriceDate = r.date;
             }
             if (r.amount != null && (ex.maxAmount == null || r.amount >= ex.maxAmount)) {
                 ex.maxAmount = r.amount;

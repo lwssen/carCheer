@@ -67,12 +67,15 @@
     <string name="data_type_all">全部</string>
     <string name="data_type_max_price">最高油价</string>
     <string name="data_type_max_amount">最高加油金额</string>
+    <string name="data_type_min_price">最低油价</string>
     <string name="history_empty_range">该时间段内暂无加油记录</string>
     <string name="history_empty_valid_data">该时间段内没有有效的油价/金额数据</string>
     <string name="history_max_badge">最高</string>
+    <string name="history_min_badge">最低</string>
     <string name="history_mode_list">列表</string>
     <string name="history_mode_stats">统计</string>
     <string name="history_max_price_date">最高油价日期</string>
+    <string name="history_min_price_date">最低油价日期</string>
     <string name="history_max_amount_date">最高加油金额日期</string>
 
     <!-- 油耗未结算原因 -->

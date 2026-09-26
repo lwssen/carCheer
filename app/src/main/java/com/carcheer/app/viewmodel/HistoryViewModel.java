@@ -24,6 +24,7 @@ public class HistoryViewModel extends AndroidViewModel {
     public static final int DATA_TYPE_ALL = 0;
     public static final int DATA_TYPE_MAX_PRICE = 1;
     public static final int DATA_TYPE_MAX_AMOUNT = 2;
+    public static final int DATA_TYPE_MIN_PRICE = 3;
 
     private final RecordDao recordDao;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -201,7 +202,7 @@ public class HistoryViewModel extends AndroidViewModel {
         });
     }
 
-    /** 最高油价/最高金额模式下，区分"时间段无记录"与"有记录但字段无效" */
+    /** 最高/最低油价、最高金额模式下，区分"时间段无记录"与"有记录但字段无效" */
     private void resolveEmptyHint(long vid, long start, long end) {
         if (dataType == DATA_TYPE_ALL) {
             emptyHint.setValue(1);
@@ -247,6 +248,11 @@ public class HistoryViewModel extends AndroidViewModel {
             sql = "SELECT * FROM refuel_records WHERE " + base
                     + " AND amount IS NOT NULL AND amount = (SELECT MAX(amount) FROM refuel_records WHERE "
                     + base + " AND amount IS NOT NULL)";
+        } else if (dataType == DATA_TYPE_MIN_PRICE) {
+            args.addAll(Arrays.asList(vid, start, end));
+            sql = "SELECT * FROM refuel_records WHERE " + base
+                    + " AND price IS NOT NULL AND price = (SELECT MIN(price) FROM refuel_records WHERE "
+                    + base + " AND price IS NOT NULL)";
         } else {
             sql = "SELECT * FROM refuel_records WHERE " + base;
         }
