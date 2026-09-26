@@ -1,0 +1,21 @@
+# Gradle / IDE
+/.gradle/
+/build/
+/app/build/
+/.idea/
+*.iml
+
+# Android SDK / 本机配置
+/local.properties
+
+# 签名密钥与密码(严禁提交)
+/keystore.properties
+*.jks
+*.keystore
+
+# 构建产物
+*.apk
+
+# 杂项
+/carCheer.zip
+.DS_Store
